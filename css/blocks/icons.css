@@ -1,0 +1,93 @@
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column: 13 / -1;
+  justify-items: self-end;
+}
+
+.icons__item {
+  display: grid;
+  justify-items: center;
+}
+
+.icons__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icons__wrap {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin: 0 0 10px 0;
+}
+
+.icons__name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #2D2D2D;;
+}
+
+.icons__wrap--number {
+  position: relative;
+}
+
+.icons__wrap--number:after {
+  content: "2";
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  position: absolute;
+  top: -5px;
+  right: -1px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--color-text);
+  color: var(--accent-color);
+}
+
+@media (max-width: 1024px) {
+  .icons {
+    grid-column: 8 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .icons {
+    grid-column: 6 / -1;
+  }
+
+  .icons__wrap {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .icons__name {
+    font-size: 12px;
+  }
+
+  .icons__wrap--number:after {
+    font-size: 12px;
+    width: 14px;
+    height: 14px;
+    top: -3px;
+    right: -2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons {
+    grid-column: 2 / -1;
+    grid-row: 2;
+  }
+
+  .icons__name {
+    display: none;
+  }
+}

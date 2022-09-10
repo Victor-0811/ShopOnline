@@ -1,0 +1,86 @@
+
+.promo {
+  padding: 60px 0 0 0;
+}
+
+.promo__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 228px);
+  gap: clamp(1.25rem, 0.698rem + 2.76vw, 3.75rem);
+  grid-template-areas:
+    "product1 product2 product3 product3 product4 product4"
+    "product5 product5 product3 product3 product6 product6"
+    "product7 product7 product7 product7 product8 product9"
+    "product7 product7 product7 product7 product8 product10";
+}
+
+.sale--1 { grid-area: product1 }
+.sale--2 { grid-area: product2 }
+.sale--3 { grid-area: product3 }
+.sale--4 { grid-area: product4 }
+.sale--5 { grid-area: product5 }
+.sale--6 { grid-area: product6 }
+.sale--7 { grid-area: product7 }
+.sale--8 { grid-area: product8 }
+.sale--9 { grid-area: product9 }
+.sale--10 { grid-area: product10 }
+
+
+@media (max-width: 1024px) {
+  .promo {
+    padding: 50px 0 0 0;
+  }
+
+  .promo__list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 202px);
+    gap: 30px;
+
+    grid-template-areas:
+      "product1 product2 product3 product3"
+      "product5 product5 product3 product3"
+      "product4 product4 product8 product9"
+      "product6 product6 product8 product10"
+      "product7 product7 product7 product7"
+      "product7 product7 product7 product7";
+  }
+}
+
+@media (max-width: 768px) {
+  .promo {
+    padding: 40px 0 0 0;
+  }
+
+  .promo__list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 130px);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo {
+    padding: 20px 0 0 0;
+  }
+
+  .promo__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 120px);
+    gap: 18px;
+
+    grid-template-areas:
+      "product1 product2"
+      "product5 product5"
+      "product3 product3"
+      "product3 product3"
+      "product4 product4"
+      "product6 product6"
+      "product8 product9"
+      "product8 product10"
+      "product7 product7"
+      "product7 product7";
+  }
+}
+
+
